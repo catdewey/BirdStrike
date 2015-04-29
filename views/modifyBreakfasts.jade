@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    h1 Add New Breakfast:
+    form#formAddUser(name="addFood",method="post",action="/addFood")
+        input#inputUserBreakfast(type="text", placeholder="breakfast", name="breakfast")
+        input#inputUserRating(type="text", placeholder="rating", name="rating")
+        button#btnSubmit(type="submit") submit
+    h1  Update Breakfast
+    form#formUpdateUser(name="updateFood",method="post",action="/updateFood")
+        input#inputUserId(type="text", placeholder="breakfast to update", name="breakfast")
+        input#inputUserRating(type="text", placeholder="rating", name="rating")
+        button#btnSubmit(type="submit") submit
+    h1  Delete Breakfast
+    form#formUpdateUser(name="deleteFood",method="post",action="/deleteFood")
+        input#inputUserId(type="text", placeholder="breakfast to be deleted", name="breakfast")
+        button#btnSubmit(type="submit") submit
