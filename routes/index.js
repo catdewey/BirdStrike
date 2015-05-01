@@ -27,7 +27,10 @@ router.get('/wildlifestrike', function(req, res) {
 
 /* GET New User page. */
 router.get('/Airport', function(req, res) {
-    res.render('Airport', { title: 'Airport' });
+    res.render('Airport', { title: 'Airports' });
+    var title: db.wildlife.distinct("OPERATOR");
+
+
 });
 
 /* GET New User page. */

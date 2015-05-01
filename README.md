@@ -9,3 +9,10 @@ Because we need these somewhere accessable.
 
 http://catalog.data.gov/dataset/aircraft-wildlife-strike-data-raw-data
 http://www.faa.gov/airports/airport_safety/wildlife/faq/
+
+Trying to do map reduce
+db.wildlife.aggregate([{$group:{_id{Airline:"$OPERATOR"}, NumReports: {$sum:1}}
+}]);
+
+
+var airportsList = db.wildlife.distinct("OPERATOR");
