@@ -9,15 +9,51 @@ router.get('/', function(req, res, next) {
 
 
 /* GET Userlist (list of all current entries) page. */
-router.get('/breakfasts', function(req, res) {
+router.get('/wildlifestrike', function(req, res) {
     var db = req.db;
-    var collection = db.get('usercollection');
+    var collection = db.get('wildlife');
     collection.find({},{},function(e,docs){
-        res.render('breakfasts', {
-            "breakfasts" : docs
+        res.render('wildlifestrike', {
+            "wildlifestrike" : docs
         });
+
     });
 });
+
+
+
+
+
+
+/* GET New User page. */
+router.get('/Airport', function(req, res) {
+    res.render('Airport', { title: 'Airport' });
+});
+
+/* GET New User page. */
+router.get('/AnimalType', function(req, res) {
+    res.render('AnimalType', { title: 'AnimalType' });
+});
+
+
+/* GET New User page. */
+router.get('/TimeDay', function(req, res) {
+    res.render('TimeDay', { title: 'TimeDay' });
+});
+
+
+/* GET New User page. */
+router.get('/TimeYear', function(req, res) {
+    res.render('TimeYear', { title: 'TimeYear' });
+});
+
+/* GET New User page. */
+router.get('/Remarks', function(req, res) {
+    res.render('Remarks', { title: 'Remarks' });
+});
+
+
+
 
 
 
@@ -26,6 +62,7 @@ router.get('/breakfasts', function(req, res) {
 router.get('/modifyBreakfasts', function(req, res) {
     res.render('modifyBreakfasts', { title: 'Add, Update, and Remove Breakfasts' });
 });
+
 
 /* POST to Add User Service */
 router.post('/addFood', function(req, res) {
