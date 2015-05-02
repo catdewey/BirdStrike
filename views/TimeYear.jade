@@ -1,8 +1,9 @@
 extends layout
+
 block content
-	h1. 
-		Number of hits per month:
-
-
-	h2.
-		About half of the bird srtikes occur in the 4 months between July and October - probably because of the fall migration. 	
+    h1.
+        Time of Year During Animal Strike
+    ul
+        each user, i in timeyear
+            li
+                 p  #{user.TIME}

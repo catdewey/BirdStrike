@@ -1,8 +1,26 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+#rcorners2 {
+    border-radius: 25px;
+    border: 2px solid #8AC007;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;    
 }
 
-a {
-  color: #00B7BF;
+body {
+	background-color: grey;
 }
+h1 {
+	
+	color: white;
+	text-align: center;
+	font-size: 28x;
+}
+
+p {
+	
+	font-family: "Helvetica";
+	font-size: 20x;
+	color: white;
+}
+
+

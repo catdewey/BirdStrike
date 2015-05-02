@@ -1,4 +1,9 @@
 extends layout
+
 block content
-	h1 
-		yo List of Airports and the frequencies they have reported wildlife strikes:
+    h1.
+        Airport Struck by Animal
+    ul
+        each user, i in airport
+            li
+                 p  #{user.AIRPORT}

@@ -1,11 +1,9 @@
 extends layout
-block content
-	h1 
-		Yo Number of hits per time of day:
-	p Dawn: 
-	p Day:
-	p Dusk:
-	p Night:
 
-	h2.
-		More than 60% of bird strikes for occur during the day, another 30% occur at night. Dawn and dusk make up the rest. 
+block content
+    h1.
+        Time of Day During Animal Strike
+    ul
+        each user, i in timeday
+            li
+                 p  #{user.TIME_OF_DAY}

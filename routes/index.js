@@ -20,31 +20,64 @@ router.get('/wildlifestrike', function(req, res) {
     });
 });
 
+router.get('/animal', function(req, res) {
+    var db = req.db;
+    var collection = db.get('wildlife');
+    collection.find({},{},function(e,docs){
+        res.render('animal', {
+            "animal" : docs
+        });
 
-
-
-
-
+    });
+});
 /* GET New User page. */
-router.get('/Airport', function(req, res) {
-    res.render('Airport', { title: 'Airport' });
+router.get('/animal', function(req, res) {
+    res.render('animal', { title: 'animal' });
 });
 
+router.get('/timeday', function(req, res) {
+    var db = req.db;
+    var collection = db.get('wildlife');
+    collection.find({},{},function(e,docs){
+        res.render('timeday', {
+            "timeday" : docs
+        });
+
+    });
+});
 /* GET New User page. */
-router.get('/AnimalType', function(req, res) {
-    res.render('AnimalType', { title: 'AnimalType' });
+router.get('/timeday', function(req, res) {
+    res.render('timeday', { title: 'timeday' });
+});
+
+router.get('/timeyear', function(req, res) {
+    var db = req.db;
+    var collection = db.get('wildlife');
+    collection.find({},{},function(e,docs){
+        res.render('timeyear', {
+            "timeyear" : docs
+        });
+
+    });
+});
+/* GET New User page. */
+router.get('/timeyear', function(req, res) {
+    res.render('timeyear', { title: 'timeyear' });
 });
 
 
-/* GET New User page. */
-router.get('/TimeDay', function(req, res) {
-    res.render('TimeDay', { title: 'TimeDay' });
+router.get('/airport', function(req, res) {
+    var db = req.db;
+    var collection = db.get('wildlife');
+    collection.find({},{},function(e,docs){
+        res.render('airport', {
+            "airport" : docs
+        });
+
+    });
 });
-
-
-/* GET New User page. */
-router.get('/TimeYear', function(req, res) {
-    res.render('TimeYear', { title: 'TimeYear' });
+router.get('/airport', function(req, res) {
+    res.render('airport', { title: 'airport' });
 });
 
 /* GET New User page. */
@@ -52,16 +85,6 @@ router.get('/Remarks', function(req, res) {
     res.render('Remarks', { title: 'Remarks' });
 });
 
-
-
-
-
-
-
-/* GET New User page. */
-router.get('/modifyBreakfasts', function(req, res) {
-    res.render('modifyBreakfasts', { title: 'Add, Update, and Remove Breakfasts' });
-});
 
 
 /* POST to Add User Service */
