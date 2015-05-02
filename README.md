@@ -16,3 +16,5 @@ db.wildlife.aggregate([{$group:{_id{Airline:"$OPERATOR"}, NumReports: {$sum:1}}
 
 
 var airportsList = db.wildlife.distinct("OPERATOR");
+
+docs.forEach(function(doc) { db.new_collection.insert(doc) });
