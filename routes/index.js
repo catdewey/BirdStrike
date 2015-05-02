@@ -28,11 +28,43 @@ router.get('/animal', function(req, res) {
             "animal" : docs
         });
 
+<<<<<<< HEAD
+    });
+=======
+
+
+// GET Airports, gets database, sends it to jade
+router.get('/airport', function(req, res) {
+    var db = req.db;
+    var collection = db.get('wildlife');
+   // var airportsList = db.wildlife.distinct("OPERATOR");
+
+    collection.find({},{},function(e,docs){
+        res.render('airport', {
+            //title: 'Airport'
+            "airport" : docs
+
+        });
+
     });
 });
+
+/* GET New User page. renders jade file*/
+router.get('/airport', function(req, res) {
+    res.render('airport', { title: 'airport' });
+
+
+
+>>>>>>> origin/master
+});
 /* GET New User page. */
+<<<<<<< HEAD
 router.get('/animal', function(req, res) {
     res.render('animal', { title: 'animal' });
+=======
+router.get('/animaltype', function(req, res) {
+    res.render('AnimalType', { title: 'animaltype' });
+>>>>>>> origin/master
 });
 
 router.get('/timeday', function(req, res) {
@@ -58,11 +90,22 @@ router.get('/timeyear', function(req, res) {
             "timeyear" : docs
         });
 
+<<<<<<< HEAD
     });
-});
+=======
 /* GET New User page. */
 router.get('/timeyear', function(req, res) {
     res.render('timeyear', { title: 'timeyear' });
+>>>>>>> origin/master
+});
+/* GET New User page. */
+<<<<<<< HEAD
+router.get('/timeyear', function(req, res) {
+    res.render('timeyear', { title: 'timeyear' });
+=======
+router.get('/remarks', function(req, res) {
+    res.render('remarks', { title: 'remarks' });
+>>>>>>> origin/master
 });
 
 
